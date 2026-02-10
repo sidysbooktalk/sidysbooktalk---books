@@ -1,0 +1,266 @@
+body { 
+    background-color: #f5f5f5;
+}
+
+/* Hellblauer Header mit Profilbild */
+.header {
+    background-color: #91D5E8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 46px;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    object-fit: cover; 
+    margin-right: 20px; 
+    margin-top: 5.5px;
+}
+
+
+
+/* Typografie */
+h1 { 
+    font-size: 36pt;
+    font-family: "Joan", serif;
+    text-align: center;
+    line-height: 1.2;  /*weniger Abstand zwischen zeilen*/
+    
+}
+
+h2 {
+    font-size: 24pt;
+    font-family: "Joan" , serif;
+    text-align: center;
+     
+ }
+
+
+p { 
+    font-size: 16pt;
+    font-family: "Joan" , serif;
+    text-align: center;
+    max-width: 260px;
+    margin: 5px auto;
+    
+}
+
+/* Deko Striche unter dem Text als Trennung */
+.deko-strich {
+    border: none;
+    background-color: black;
+    height: 1px;
+    width: 90%;
+    margin: 40px auto 40px auto; /* auto für links/rechts zentriert es! */
+}
+
+
+/* Links zu Amazon */
+.book-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} 
+
+/* Cover bild neben den Text */
+.book-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.book-cover {
+    width: 100%;
+    max-width: 162px;
+    height: auto;
+    display: block; 
+    flex-shrink: 0; /* Bild wird nicht verzerrt */
+    padding-top: 3px;
+}
+
+.book-links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+   margin-left: 25px;
+}
+
+.book-link {
+    font-size: 13.5pt;
+    font-family: "Joan" , serif;
+    text-decoration: none;
+    color: #1bbdea;
+    text-align: left;
+}
+
+.book-link:hover {
+    text-decoration: underline;
+    color: #3f79e5;
+}
+
+/* Abstände zwischen text und Link */
+.version-block {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+/* Buy Now /* Weniger Abstand nach unten zur book-section */ 
+.buy-now {
+    margin-top: -30px; 
+    margin-bottom: 30px;
+}
+
+.version-label {
+    font-size: 16pt;
+    font-family: "Joan", serif;
+    text-align: left;
+    margin: 0 0 5px 0;
+    max-width: none;
+    color: black;
+}
+
+footer {
+    background-color: #91D5E8;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+footer p {
+    font-size: 16pt;
+    font-family: "Joan", serif;
+    margin: 0 0 10px 0; /* Wenig Abstand nach unten */
+    max-width: none; /* Überschreibt das globale p styling */
+}
+
+.insta-link {
+    font-size: 12pt;
+    font-family: "Joan", serif;
+    color: black;
+    text-decoration: none;
+}
+
+.insta-link:hover {
+    color: #3f79e5;
+    text-decoration: underline;
+}
+
+
+
+
+/********************* DESKTOP VERSION ********************/
+
+@media (min-width: 768px) {
+    
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    h1 {
+        font-size: 48pt;
+    }
+
+    h1 br {
+        display: none;
+    }
+
+    h2 {
+        font-size: 32pt;
+    }
+
+    p {
+        font-size: 18pt;
+        max-width: none;
+    }
+
+    .header { 
+        height: 70px;
+     }
+
+     
+
+
+    /* Desktop: Cover und Links nebeneinander */
+    .book-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 60px;
+        padding: 0;
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .book-cover {
+        max-width: 300px;
+        padding-top: 0;
+    }
+
+    /* Links nebeneinander (nicht untereinander) */
+    .book-links {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        margin: 0;
+        margin-top: 80px;
+        padding-left: 0;
+        border-left: none;
+        justify-content: center;
+        align-items: flex-start;  
+        min-height: 400px;
+        position: relative;
+    }
+
+    .version-block {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 40px;
+        
+    }
+
+    .profile-pic {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    /* Trennlinie zwischen den Versionen */
+     .book-links::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -10%;
+        transform: translateX(-50%);
+        height: 300px;
+        width: 1px;
+        background-color: black;
+    }
+
+    .version-block .deko-strich {
+        display: none;
+    
+    }
+
+    .version-label {
+        font-size: 20pt;
+        margin-bottom: 5px;
+    }
+
+    .book-link {
+        font-size: 18pt;
+    }
+
+    footer {
+        font-size: 18pt;
+    }
+}
