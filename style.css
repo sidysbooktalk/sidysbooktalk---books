@@ -67,6 +67,7 @@ p {
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 15px;
+    white-space: nowrap;
 } 
 
 /* Cover bild neben den Text */
@@ -92,6 +93,7 @@ p {
     flex-direction: column;
     margin-top: 10px;
    margin-left: 25px;
+    white-space: nowrap;
 }
 
 .book-link {
@@ -127,6 +129,7 @@ p {
     margin: 0 0 5px 0;
     max-width: none;
     color: black;
+     white-space: nowrap;
 }
 
 footer {
@@ -268,3 +271,4 @@ footer p {
     }
 
 }
+
